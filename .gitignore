@@ -1,0 +1,4 @@
+frameworks
+src/framework
+src/cocos
+*.log
