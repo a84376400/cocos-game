@@ -4,10 +4,15 @@ local MainScene = class("MainScene", function()
 end)
 
 function MainScene:ctor()
-    cc.ui.UILabel.new({
-            UILabelType = 2, text = "Hello, World", size = 64})
-        :align(display.CENTER, display.cx, display.cy)
-        :addTo(self)
+    -- cc.ui.UILabel.new({
+    --         UILabelType = 2, text = "Hello, World", size = 64})
+    --     :align(display.CENTER, display.cx, display.cy)
+    --     :addTo(self)
+    local v = require('src.app.VirtualHandle').new()
+
+    self:addChild(v)
+
+    v:setPositionY(display.height/3)
 end
 
 function MainScene:onEnter()
