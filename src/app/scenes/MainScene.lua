@@ -13,6 +13,10 @@ function MainScene:ctor()
     self:addChild(v)
 
     v:setPositionY(display.height/3)
+
+    v:setCallback(function(event)
+        print(event)
+    end)
 end
 
 function MainScene:onEnter()
